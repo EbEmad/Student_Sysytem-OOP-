@@ -1,36 +1,60 @@
 #include <bits/stdc++.h>
+#include "Controller/Controller.cpp"
 typedef long long ll;
 using namespace std;
-
+void DisplaySystem(){
+    cout<<"Please Enter Your Process\n";
+    cout<<"1-About Student\t\t2-About Courses\n";
+    cout<<"3-About Teacher\t\t4-Exist\n";
+}
+void show(string value){
+    cout<<"1-Add "<<value<<"\t\t2-Remove "<<value<<"\n";
+    cout<<"1-Edit "<<value<<"\t\t2-Show "<<value<<"\n";
+}
 signed main() {
     int process;
+    int flag=0;
+    int TypeProcess;
         while(true){
-            cout<<"Please Enter Your Process\n";
-            cout<<"1-Add Student\t\t2-Remove Student\n";
-            cout<<"3-Edit Student\t\t4-Show Student\n";
+           DisplaySystem();
             cin>>process;
-            int flag=0;
             switch (process) {
                 case 1:
-                    cout<<"Process Add\n";
+                    show("Student");
+                    cin>>TypeProcess;
+                    if(TypeProcess==1) {
+                        cout << "Please Enter Student Data\n";
+                        string Name,phonenumber;
+                        double gpa;
+                        int age;
+                        Student student;
+
+                        cout << "Enter Student Name\n";
+                        cin>>Name;
+                        student.setName(Name);
+                        cout << "Enter Student age\n";
+                        cin>>age;
+                        student.setAge(age);
+                        cout << "Enter Student PhoneNumber\n";
+                        cin>>phonenumber;
+                        student.setPhone_Number(phonenumber);
+                        cout << "Enter Student gpa\n";
+                        cin>>gpa;
+                        student.setGpa( gpa);
+
+                    }
                     break;
                 case 2:
-                    cout<<"Process Remove\n";
+                    show("Course");
                     break;
                 case 3:
-                    cout<<"Process Edit\n";
+                    show("Teacher");
                     break;
                 case 4:
-                    cout<<"Process Show\n";
-                    break;
-                case 5:
-                    cout<<"Process Exit\n";
                     flag=1;
                     break;
                 default:
                     cout<<"Invalid Case\n";
-
-
             }
             if(flag)
                 break;
