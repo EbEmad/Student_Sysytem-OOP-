@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #include "Controller/Controller.cpp"
-typedef long long ll;
 using namespace std;
 void DisplaySystem(){
     cout<<"Please Enter Your Process\n";
