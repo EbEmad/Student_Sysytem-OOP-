@@ -40,6 +40,9 @@ signed main() {
                         cout << "Enter Student gpa\n";
                         cin>>gpa;
                         student.setGpa( gpa);
+                        StudentController studentController;
+                        cout<<"We go to our trip\n";
+                        studentController.addStudent(student);
 
                     }
                     break;

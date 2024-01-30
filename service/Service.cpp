@@ -15,6 +15,7 @@ private:
 
 public:
     int addStudent(Student student){
+        cout<<"U in StudentService\n";
       return StudentRepo.addStudent(student);
 }
 

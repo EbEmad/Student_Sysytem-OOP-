@@ -7,6 +7,7 @@ private:
     StudentServiceImpl StudentService;
 public:
     int addStudent(Student student){
+        cout<<"U in Controller\n";
         return StudentService.addStudent(student);
     }
 };

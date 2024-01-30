@@ -22,6 +22,7 @@ private:
 public:
         //overiding
         int  addStudent(Student student){
+            cout<<"U in Student_Repo\n";
             if(index>=25){
                 cout<<"Full Student\n";
             }
