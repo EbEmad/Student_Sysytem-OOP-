@@ -48,6 +48,7 @@ void addcourse(){
     data.setHour(hour);
     CourseController coursecontroller;
     int id=coursecontroller.addCourse(data);
+    if(id!=-1)
     cout<<"Success Added Course with id =  : "<<id<<"\n";
 }
 void addteacher(){
@@ -70,6 +71,7 @@ void addteacher(){
     data.setSalary(salary);
     TeacherController teachercontroller;
     int id=teachercontroller.addTeacher(data);
+    if(id!=-1)
     cout<<"Success Added Teacher with id =  : "<<id<<"\n";
 }
 signed main() {
